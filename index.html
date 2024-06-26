@@ -1,0 +1,189 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0" /> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
+  
+  <title>SORT MASTER</title> 
+  <link href="./style.css" rel="stylesheet" /> 
+</head> 
+
+<body class="light" > 
+  <a class="home-btn" href="../../index.html"><img src="https://cdn3.iconfinder.com/data/icons/ellegant/64x64/9.png"/></a>
+<img id="mode" class="light" src="https://img.icons8.com/?size=80&id=H3yHeysB1dxv&format=png"/>
+  <div id="header">
+    <select class="optionbar" >
+      <option class="option" selected>Selection Sort</option>
+      <option class="option">Bubble Sort</option>
+      <option class="option">Insertion Sort</option>
+      <option class="option">Merge Sort</option>
+      <option class="option">Quick Sort</option>
+    </select>
+    <div class="input-box">
+    <input type="text" id="inputArray" placeholder="Enter comma seperated values" >
+    <span id="errorMsg"></span>
+  </div>
+    <select class="selectInput optionbar">
+      <option class="speedOption">very slow</option>
+      <option class="speedOption">slow</option>
+      <option class="speedOption" selected>normal</option>
+      <option class="speedOption">fast</option>
+      <option class="speedOption">very fast</option>
+    </select>
+
+    <button id="done" class="button" >DONE</button>
+  </div>
+
+<section class="head">Selection Sort Visualizer</section> 
+<section class="data-container"></section> 
+
+<div class="btns-wrapper">
+  <button class="btn1 button" id="Button1" > 
+  Generate New Array</button> 
+  <button class="btn2 button" id="Button2" > Sort</button> 
+</div> 
+<div>
+  <div class="arrayValues">
+    <h4>Original array : <p class="originalArray"></p></h4>
+    <h4>Sorted array : <p class="sortedArray">sorted array will display here after Visualization</p></h4>
+  </div>
+
+  
+  <div class="sorting">
+    <h1>Sorting Algorithm</h1>
+    <p><b>Definition:</b> Sorting refers to rearranging elements in a list based on a comparison operator.</p>
+    <p><b>Purpose:</b> The comparison operator determines the new order of elements.</p>
+    <p><b>Example:</b> Imagine alphabetizing names or arranging numbers from smallest to largest.</p>
+    <p><b>Common Types of Sorting:</b></p>
+    <ul>
+        <li>Ascending Order: Arranging elements from lowest to highest (e.g., A-Z, 0-9).</li>
+        <li>Descending Order: Arranging elements from highest to lowest (e.g., Z-A, 9-0).</li>
+    </ul>
+    <p><b>Why Do We Sort?</b></p>
+    <ul>
+        <li><b>Organization:</b> Sorting helps efficiently organize data for searching and retrieval.</li>
+        <li><b>Real-World Use:</b> Think of sorting your bookshelf or finding the fastest route on a map.</li>
+    </ul>
+</div>
+
+<div class="types">
+  <h1>Types of Sorting</h1>
+  <p>Discussing various sorting techniques:</p>
+  <ul>
+      <li><b>Selection Sort:</b> Simple but inefficient.</li>
+      <li><b>Bubble Sort:</b> Repetitive swapping of adjacent elements.</li>
+      <li><b>Insertion Sort:</b> Building the sorted array incrementally.</li>
+      <li><b>Quick Sort:</b> Divide and conquer with pivot elements.</li>
+      <li><b>Merge Sort:</b> Divide, merge, and conquer.</li>
+  </ul>
+</div>
+
+  <div class="container">
+    <div class="btn-container">
+        <button data-id="selection" class="btn active">Selection sort</button>
+        <button data-id="insertion" class="btn">Insertion sort</button>
+        <button data-id="bubble" class="btn">Bubble sort</button>
+        <button data-id="merge" class="btn">Merge sort</button>
+        <button data-id="quick" class="btn">Quick sort</button>
+    </div>
+    <div class="slides-content">
+        <div id="selection" class="slide active">
+          <h1>Selection Sort</h1>
+          <p><b>Definition</b> Selection sort is a simple and efficient sorting algorithm.</p>
+          <p><b>Basic Idea:</b></p>
+          <ul>
+              <li>Divide the input list into two parts: the sorted part and the unsorted part.</li>
+              <li>Repeatedly select the smallest (or largest) element from the unsorted part.</li>
+              <li>Swap it with the first element of the unsorted part.</li>
+          </ul>
+          <p><b>Example:</b> Imagine organizing a deck of cards by repeatedly picking the smallest card and placing it in the correct position.</p>
+          <p><b>How Does Selection Sort Work?</b></p>
+          <ol>
+              <li>Start with the entire list as unsorted.</li>
+              <li>Find the smallest element in the unsorted part.</li>
+              <li>Swap it with the first element in the unsorted part.</li>
+              <li>Repeat steps 2 and 3 for the remaining unsorted portion until the entire list is sorted.</li>
+          </ol>
+          </div>
+          <div id="bubble" class="slide ">
+            <h1>Bubble Sort</h1>
+        <p><b>Definition:</b> Bubble sort is a simple comparison-based sorting algorithm.</p>
+        <p><b>Basic Idea:</b></p>
+        <ul>
+            <li>Imagine a list of numbers as bubbles in a glass of water.</li>
+            <li>The larger bubbles (higher values) gradually rise to the top.</li>
+            <li>Similarly, bubble sort moves the largest (or smallest) element to the correct position in each pass.</li>
+        </ul>
+        <p><b>Example:</b> Think of organizing a deck of cards by repeatedly swapping adjacent cards until they’re in order.</p>
+        <p><b>How Does Bubble Sort Work?</b></p>
+        <ol>
+            <li>Start with the entire list as unsorted.</li>
+            <li>Compare adjacent elements.</li>
+            <li>If they're in the wrong order, swap them.</li>
+            <li>Repeat steps 2 and 3 until no more swaps are needed (i.e., the list is sorted).</li>
+        </ol>
+          </div>
+        <div id="insertion" class="slide ">
+          <h1>Insertion Sort</h1>
+        <p><b>Definition:</b> Insertion sort is a simple and efficient sorting algorithm.</p>
+        <p><b>Basic Idea:</b></p>
+        <ul>
+            <li>Imagine sorting a deck of cards by inserting each card into its proper place among the already sorted cards.</li>
+            <li>The algorithm iterates over the input array, comparing elements and moving them to their appropriate positions.</li>
+        </ul>
+        <p><b>Example:</b> Think of organizing your hand of playing cards by inserting each card into the correct order.</p>
+        <p><b>How Does Insertion Sort Work?</b></p>
+        <ol>
+            <li>Start with the entire list as unsorted.</li>
+            <li>Take the next unsorted element and compare it with the already sorted elements.</li>
+            <li>Insert the element into its correct position within the sorted part of the array.</li>
+            <li>Repeat steps 2 and 3 until all elements are in their proper places.</li>
+        </ol>
+    
+        </div>
+        <div id="merge" class="slide ">
+          <h1>Merge Sort</h1>
+        <p><b>Definition:</b> Merge sort is a divide-and-conquer algorithm that efficiently sorts an array.</p>
+        <p><b>Basic Idea:</b></p>
+        <ul>
+            <li>Imagine sorting a deck of cards by dividing it into smaller piles and arranging them around a chosen card (the pivot).</li>
+            <li>The algorithm recursively sorts the subarrays until the entire array is sorted.</li>
+        </ul>
+        <p><b>Example:</b> Think of organizing a stack of numbered cards by choosing a card as the pivot and arranging the remaining cards around it.</p>
+        <p><b>How Does Merge Sort Work?</b></p>
+        <ol>
+            <li>Divide the array into two halves.</li>
+            <li>Recursively sort each half.</li>
+            <li>Merge the sorted halves back together to obtain the final sorted array.</li>
+        </ol>
+        </div>
+        <div id="quick" class="slide ">
+          <h1>Quick Sort</h1>
+        <p><b>Definition:</b> Quick sort is a divide-and-conquer algorithm that efficiently sorts an array.</p>
+        <p><b>Basic Idea:</b></p>
+        <ul>
+            <li>Imagine sorting a deck of cards by dividing it into smaller piles and arranging them around a chosen card (the pivot).</li>
+            <li>The algorithm recursively sorts the subarrays until the entire array is sorted.</li>
+        </ul>
+        <p><b>Example:</b> Think of organizing a stack of numbered cards by choosing a card as the pivot and arranging the remaining cards around it.</p>
+        <p><b>How Does Quick Sort Work?</b></p>
+        <ol>
+            <li>Choose a pivot element (often the rightmost element in the array).</li>
+            <li>Partition the array, moving elements less than or equal to the pivot to the left and elements greater than the pivot to the right.</li>
+            <li>Recursively apply steps 1 and 2 to the left and right subarrays.</li>
+            <li>Combine the sorted subarrays to get the final sorted array.</li>
+        </ol>
+          
+        </div>
+       
+    </div>
+
+</div>
+</div>
+</body> 
+
+<script type="module" src="./app.js"></script> 
+</html>

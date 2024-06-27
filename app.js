@@ -139,7 +139,7 @@ for (let i = 0; i < array.length; i++) {
 } 
 generatebars()
 
-function sleep() {
+ function sleep() {
     return new Promise(resolve => setTimeout(resolve, delay));
 }
 
